@@ -5,26 +5,36 @@ public class Joueur {
 	String nom;
 	VuePlateau vueduPla;
 	
-	
 	public Joueur(String nom,int vueduPla) {
 		this.nom = nom;
 		this.vueduPla = new VuePlateau();
 		this.vueduPla.cote = vueduPla;
 	}
 	
-	public int demanderCoup(Plateau p) {
+	public int choisirCase() {
 		Scanner sc = new Scanner(System.in);
-		int n;
-		vueduPla.afficherPlateau(p);
-		System.out.println("Vous vouler vider quel case?");
-		n = sc.nextInt();
+		int n = sc.nextInt();
+		while(n<0 || n>5) {
+			System.out.println("Entre 0~~5!");
+			n = sc.nextInt();
+		}
 		if(vueduPla.cote==1) {
 			n = n + 7;
 		}
-		System.out.println("********************************************************");
-		if(p.pla[n]==0) {
+		return n;
+	}
+	
+	public int demanderCoup(Plateau p) {
+		//Scanner sc = new Scanner(System.in);
+		int n;
+		vueduPla.afficherPlateau(p);
+		System.out.println("Vous vouler vider quel case?");
+		n = choisirCase();
+		while(p.pla[n]==0) {
 			rejeterCoup();
+			n = choisirCase();
 		}
+		System.out.println("********************************************************");
 		vueduPla.viderCase(p, n);
 		//vueduPla.afficherPlateau(p);
 		return n;

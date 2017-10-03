@@ -35,5 +35,4 @@ public class Plateau {
 		Plateau t = new Plateau();
 		t.vue.afficherPlateau(t);
 	}
-
 }
