@@ -22,7 +22,6 @@ public class Jeu {
 	public void jouerTour() {
 		System.out.println(j1.nom + "" + " commence !" );
 		j1.demanderCoup(pla1);
-		//Plateau.alterner();
 		System.out.println(j2.nom + "" + " commence !" );
 		j2.demanderCoup(pla1);
 		

@@ -5,35 +5,18 @@ public class VuePlateau {
 	          //base est nomé 0;
 	
 	public void afficherPlateau(Plateau p) {
-		//if(p.vue.cote == 0) {
-			System.out.print("\t");
-			for(int i=12;i>=7;i--) {
-				System.out.print(p.grainesCase(i)+"\t");
-			}
-			System.out.println();
-			System.out.print(p.pla[13]+"\t\t\t\t\t\t\t"+p.pla[6]);
-			System.out.println();
-			System.out.print("\t");
-			for(int j=0;j<=5;j++) {
-				System.out.print(p.pla[j]+"\t");
-			}
-			System.out.println();
-			/*
-		}else {
-			System.out.print("\t");
-			for(int j=0;j<=5;j++) {
-				System.out.print(p.pla[j]+"\t");
-			}
-			System.out.println();
-			System.out.print(p.pla[6]+"\t\t\t\t\t\t\t"+p.pla[13]);
-			System.out.println();
-			System.out.print("\t");
-			for(int i=12;i>=7;i--) {
-				System.out.print(p.pla[i]+"\t");
-			}
-			System.out.println();
-			}
-			*/
+		System.out.print("\t");
+		for(int i=12;i>=7;i--) {
+			System.out.print(p.grainesCase(i)+"\t");
+		}
+		System.out.println();
+		System.out.print(p.pla[13]+"\t\t\t\t\t\t\t"+p.pla[6]);
+		System.out.println();
+		System.out.print("\t");
+		for(int j=0;j<=5;j++) {
+			System.out.print(p.pla[j]+"\t");
+		}
+		System.out.println();
 	}
 	
 	public boolean viderCase(Plateau p,int num) {

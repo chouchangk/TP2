@@ -36,7 +36,7 @@ public class Ex02{
 
     public static void main(String[] args){
 
-	evaluation(args[0]);
+	//evaluation(args[0]);
 	
     }
     

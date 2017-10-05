@@ -25,7 +25,6 @@ public class Joueur {
 	}
 	
 	public int demanderCoup(Plateau p) {
-		//Scanner sc = new Scanner(System.in);
 		int n;
 		vueduPla.afficherPlateau(p);
 		System.out.println("Vous vouler vider quel case?");
@@ -36,7 +35,6 @@ public class Joueur {
 		}
 		System.out.println("********************************************************");
 		vueduPla.viderCase(p, n);
-		//vueduPla.afficherPlateau(p);
 		return n;
 	}
 	

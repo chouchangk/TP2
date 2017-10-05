@@ -20,17 +20,7 @@ public class Plateau {
 	public int grainesCase(int c) {
 		return pla[c];
 	}
-	
-	/*
-	public static void alterner() {
-		for(int i=0;i<=6;i++) {
-			pla[i] = pla[i+7];
-		}
-		for(int j=7;j<=13;j++) {
-			pla[j] = pla[j-7];
-		}
-	}
-	*/
+
 	public static void main(String[] args) {
 		Plateau t = new Plateau();
 		t.vue.afficherPlateau(t);
